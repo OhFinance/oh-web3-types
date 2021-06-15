@@ -1,17 +1,25 @@
 {
   "name": "@ohfinance/oh-web3-types",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Oh! Finance Web3 Compatible Smart Contract Typings",
-  "types": "types/index.js",
-  "author": "OhFinance <hello@oh.finance>",
+  "author": "Oh! Finance <hello@oh.finance>",
   "license": "MIT",
+  "types": "./types/index.js",
+  "files": [
+    "abi",
+    "types"
+  ],
   "scripts": {
     "build": "yarn copy && yarn generate",
     "copy": "scripts/copy.sh",
-    "generate": "scripts/generate.sh"
+    "generate": "scripts/generate.sh",
+    "bump:minor": "yarn build && yarn version --minor",
+    "bump:major": "yarn build && yarn version --major",
+    "release:minor": "yarn bump:minor && yarn publish",
+    "release:major": "yarn bump:major && yarn publish"
   },
   "devDependencies": {
-    "@ohfinance/oh-contracts": "^1.1.0",
+    "@ohfinance/oh-contracts": "^1.0.0",
     "@ohfinance/web3-v1": "^3.0.0",
     "ts-node": "^10.0.0",
     "typechain": "^5.0.0",
