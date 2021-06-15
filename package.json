@@ -1,6 +1,6 @@
 {
   "name": "@ohfinance/oh-web3-types",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Oh! Finance Web3 Compatible Smart Contract Typings",
   "author": "Oh! Finance <hello@oh.finance>",
   "license": "MIT",
